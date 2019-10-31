@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza Store</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="header-select col-12 col-md-6">
+            <select name="select-first" id="select-inner">
+              <option value="priceup">По возрастанию цены</option>
+              <option value="pricedown">По убыванию цены</option>
+            </select>
+          </div>
+          <div class="header-form col-12 col-md-6">
+              <form class="header-form-inner" action="/">
+                <label>Поиск пиццы:
+                <input type="text" id="pricesearch">
+              </label>
+              </form>
+            </div>
+          <div class="header-form-item col-12 col-md-3">
+            <form class="header-form-item-price" action="/">
+              <label>Max цена:
+              <input type="text" id="pricemax">
+            </label>
+            <label>Min цена:
+                <input type="text" id="pricemin">
+              </label>
+              <button type="button" id="pricebtn">Нажать</button>
+            </form>
+          </div>
+          <div class="header-form-caloricity col-12 col-md-3">
+              <form class="header-form-item-caloricity" action="/">
+                <label>Max калории:
+                <input type="text" id="caloricitymax">
+              </label>
+              <label>Min калории:
+                  <input type="text" id="caloricitymin">
+                </label>
+                <button type="button" id="caloricitybtn">Нажать</button>
+              </form>
+            </div>
+            <div class="header-cart col-12 col-md-3">
+                  <button type="button" id="header-cart-btn"><i class="icon-basket"></i></button>
+              </div>
+              <div class="header-create col-12 col-md-3">
+                <button type="button" id="header-create-btn">Создать свою пиццу</button>
+            </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-head">
+      <div class="container">
+        <div class="row" id="pizza-container">
+          <div id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+            <div class="main-inner-img">
+              <img src="images/1.png" alt="">
+            </div>
+            <div class="main-inner-name">
+              <h3>Супер гриль</h3>
+            </div>
+            <div class="main-inner-composition">
+              <p><span>Состав:</span> охотничьи колбаски, сосиски, моцарелла, баклажан, томаты, лук, перец, соус томатный, соус BBQ, зеленый соус, майонез</p>
+            </div>
+            <div class="main-inner-caloricity">
+              <p><span>Калорийность(кКал/100гр):</span>1569</p>
+            </div>
+            <div class="main-inner-item">
+              <div class="main-inner-price">
+                <p>249 грн.</p>
+              </div>
+              <div class="main-inner-cart">
+                <button id="cart-btn"><i class="icon-basket"></i></button>
+              </div>
+           </div>
+          </div>
+          <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+              <div class="main-inner-img">
+                <img src="images/2.jpg" alt="">
+              </div>
+              <div class="main-inner-name">
+                <h3>Маргарита</h3>
+              </div>
+              <div class="main-inner-composition">
+                <p><span>Состав:</span> томаты, моцарелла, орегано, базилик, соус Pomodoro</p>
+              </div>
+              <div class="main-inner-caloricity">
+                <p><span>Калорийность(кКал/100гр):</span> 1042</p>
+              </div>
+              <div class="main-inner-item">
+                <div class="main-inner-price">
+                  <p>70 грн.</p>
+                </div>
+                <div class="main-inner-cart">
+                  <button id="cart-btn"><i class="icon-basket"></i></button>
+                </div>
+             </div>
+            </div>
+            <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                <div class="main-inner-img">
+                  <img src="images/3.jpg" alt="">
+                </div>
+                <div class="main-inner-name">
+                  <h3>Карбонара</h3>
+                </div>
+                <div class="main-inner-composition">
+                  <p><span>Состав:</span> ветчина, шампиньоны, пармезан, моцарелла, томаты, яйцо перепелиное, смесь перцев, соус Carbonara</p>
+                </div>
+                <div class="main-inner-caloricity">
+                  <p><span>Калорийность(кКал/100гр):</span> 1369</p>
+                </div>
+                <div class="main-inner-item">
+                  <div class="main-inner-price">
+                    <p>119 грн.</p>
+                  </div>
+                  <div class="main-inner-cart">
+                    <button id="cart-btn"><i class="icon-basket"></i></button>
+                  </div>
+               </div>
+              </div>
+              <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                  <div class="main-inner-img">
+                    <img src="images/4.jpg" alt="">
+                  </div>
+                  <div class="main-inner-name">
+                    <h3>C сырным бортиком</h3>
+                  </div>
+                  <div class="main-inner-composition">
+                    <p><span>Состав:</span> хамон, моцарелла, сливочный сыр, персик, сливки, руккола</p>
+                  </div>
+                  <div class="main-inner-caloricity">
+                    <p><span>Калорийность(кКал/100гр):</span> 1140</p>
+                  </div>
+                  <div class="main-inner-item">
+                    <div class="main-inner-price">
+                      <p>139 грн.</p>
+                    </div>
+                    <div class="main-inner-cart">
+                      <button id="cart-btn"><i class="icon-basket"></i></button>
+                    </div>
+                 </div>
+                </div>
+                <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                    <div class="main-inner-img">
+                      <img src="images/5.png" alt="">
+                    </div>
+                    <div class="main-inner-name">
+                      <h3>Полло</h3>
+                    </div>
+                    <div class="main-inner-composition">
+                      <p><span>Состав:</span> куриное филе sous-vide, ананас, моцарелла, орегано, перец чили, соус Pomodoro</p>
+                    </div>
+                    <div class="main-inner-caloricity">
+                      <p><span>Калорийность(кКал/100гр):</span> 1232</p>
+                    </div>
+                    <div class="main-inner-item">
+                      <div class="main-inner-price">
+                        <p>99 грн.</p>
+                      </div>
+                      <div class="main-inner-cart">
+                        <button id="cart-btn"><i class="icon-basket"></i></button>
+                      </div>
+                   </div>
+                  </div>
+                  <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                      <div class="main-inner-img">
+                        <img src="images/6.jpeg" alt="">
+                      </div>
+                      <div class="main-inner-name">
+                        <h3>Пепперони</h3>
+                      </div>
+                      <div class="main-inner-composition">
+                        <p><span>Состав:</span> Салями Пепперони, моцарелла, орегано, соус Pomodoro</p>
+                      </div>
+                      <div class="main-inner-caloricity">
+                        <p><span>Калорийность(кКал/100гр):</span> 1280</p>
+                      </div>
+                      <div class="main-inner-item">
+                        <div class="main-inner-price">
+                          <p>119 грн.</p>
+                        </div>
+                        <div class="main-inner-cart">
+                          <button id="cart-btn"><i class="icon-basket"></i></button>
+                        </div>
+                     </div>
+                    </div>
+                    <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                        <div class="main-inner-img">
+                          <img src="images/7.png" alt="">
+                        </div>
+                        <div class="main-inner-name">
+                          <h3>Гурмео</h3>
+                        </div>
+                        <div class="main-inner-composition">
+                          <p><span>Состав:</span> охотничьи колбаски, салями пепперони, ветчина, куриное филе sous-vide, шампиньоны, орегано, соус BBQ</p>
+                        </div>
+                        <div class="main-inner-caloricity">
+                          <p><span>Калорийность(кКал/100гр):</span> 1343</p>
+                        </div>
+                        <div class="main-inner-item">
+                          <div class="main-inner-price">
+                            <p>149 грн.</p>
+                          </div>
+                          <div class="main-inner-cart">
+                            <button id="cart-btn"><i class="icon-basket"></i></button>
+                          </div>
+                       </div>
+                      </div>
+                      <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                          <div class="main-inner-img">
+                            <img src="images/8.jpeg" alt="">
+                          </div>
+                          <div class="main-inner-name">
+                            <h3>Четыре сыра</h3>
+                          </div>
+                          <div class="main-inner-composition">
+                            <p><span>Состав:</span> пармезан, дор блю, чеддер, моцарелла, груша, грецкий орех, соус сливочный</p>
+                          </div>
+                          <div class="main-inner-caloricity">
+                            <p><span>Калорийность(кКал/100гр):</span> 1569</p>
+                          </div>
+                          <div class="main-inner-item">
+                            <div class="main-inner-price">
+                              <p>249 грн.</p>
+                            </div>
+                            <div class="main-inner-cart">
+                              <button id="cart-btn"><i class="icon-basket"></i></button>
+                            </div>
+                         </div>
+                        </div>
+                          <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                              <div class="main-inner-img">
+                                <img src="images/9.jpeg" alt="">
+                              </div>
+                              <div class="main-inner-name">
+                                <h3>Американо</h3>
+                              </div>
+                              <div class="main-inner-composition">
+                                <p><span>Состав:</span> куриное филе sous-vide, салями, пепперони, охотничьи колбаски, кукуруза,моцарелла, лук, орегано, соус Pomodoro, соус BBQ</p>
+                              </div>
+                              <div class="main-inner-caloricity">
+                                <p><span>Калорийность(кКал/100гр):</span> 1442</p>
+                              </div>
+                              <div class="main-inner-item">
+                                <div class="main-inner-price">
+                                  <p>149 грн.</p>
+                                </div>
+                                <div class="main-inner-cart">
+                                  <button id="cart-btn"><i class="icon-basket"></i></button>
+                                </div>
+                             </div>
+                            </div>
+                            <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                <div class="main-inner-img">
+                                  <img src="images/10.jpg" alt="">
+                                </div>
+                                <div class="main-inner-name">
+                                  <h3>Кальцоне</h3>
+                                </div>
+                                <div class="main-inner-composition">
+                                  <p><span>Состав:</span> ветчина, шампиньоны, дор блю, моцарелла, томаты, орегано</p>
+                                </div>
+                                <div class="main-inner-caloricity">
+                                  <p><span>Калорийность(кКал/100гр):</span> 1056</p>
+                                </div>
+                                <div class="main-inner-item">
+                                  <div class="main-inner-price">
+                                    <p>99 грн.</p>
+                                  </div>
+                                  <div class="main-inner-cart">
+                                    <button id="cart-btn"><i class="icon-basket"></i></button>
+                                  </div>
+                               </div>
+                              </div>
+                              <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                  <div class="main-inner-img">
+                                    <img src="images/11.png" alt="">
+                                  </div>
+                                  <div class="main-inner-name">
+                                    <h3>Берлускони</h3>
+                                  </div>
+                                  <div class="main-inner-composition">
+                                    <p><span>Состав:</span> сливочный соус из белых грибов и шампиньонов с трюфельным маслом, моцарелла, дор блю, орегано, лук</p>
+                                  </div>
+                                  <div class="main-inner-caloricity">
+                                    <p><span>Калорийность(кКал/100гр):</span> 1293</p>
+                                  </div>
+                                  <div class="main-inner-item">
+                                    <div class="main-inner-price">
+                                      <p>125 грн.</p>
+                                    </div>
+                                    <div class="main-inner-cart">
+                                      <button id="cart-btn"><i class="icon-basket"></i></button>
+                                    </div>
+                                 </div>
+                                </div>
+                                <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                    <div class="main-inner-img">
+                                      <img src="images/12.png" alt="">
+                                    </div>
+                                    <div class="main-inner-name">
+                                      <h3>Супер гриль</h3>
+                                    </div>
+                                    <div class="main-inner-composition">
+                                      <p><span>Состав:</span> охотничьи колбаски, сосиски, сыр моцарелла, баклажан, томаты, лук, перец, соус томатный</p>
+                                    </div>
+                                    <div class="main-inner-caloricity">
+                                      <p><span>Калорийность(кКал/100гр):</span> 1410</p>
+                                    </div>
+                                    <div class="main-inner-item">
+                                      <div class="main-inner-price">
+                                        <p>132 грн.</p>
+                                      </div>
+                                      <div class="main-inner-cart">
+                                        <button id="cart-btn"><i class="icon-basket"></i></button>
+                                      </div>
+                                   </div>
+                                  </div>
+                                  <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                      <div class="main-inner-img">
+                                        <img src="images/13.jpeg" alt="">
+                                      </div>
+                                      <div class="main-inner-name">
+                                        <h3>Кампанья</h3>
+                                      </div>
+                                      <div class="main-inner-composition">
+                                        <p><span>Состав:</span> охотничьи колбаски, ветчина, салями пепперони, куриное филе sous-vide, шампиньоны, моцарелла, томаты</p>
+                                      </div>
+                                      <div class="main-inner-caloricity">
+                                        <p><span>Калорийность(кКал/100гр):</span> 1510</p>
+                                      </div>
+                                      <div class="main-inner-item">
+                                        <div class="main-inner-price">
+                                          <p>144 грн.</p>
+                                        </div>
+                                        <div class="main-inner-cart">
+                                          <button id="cart-btn"><i class="icon-basket"></i></button>
+                                        </div>
+                                     </div>
+                                    </div>
+                                    <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                        <div class="main-inner-img">
+                                          <img src="images/14.png" alt="">
+                                        </div>
+                                        <div class="main-inner-name">
+                                          <h3>Дьявола</h3>
+                                        </div>
+                                        <div class="main-inner-composition">
+                                          <p><span>Состав:</span> горчичный соус, моцарелла, молочные сосиски, бекон, помидор, зелень</p>
+                                        </div>
+                                        <div class="main-inner-caloricity">
+                                          <p><span>Калорийность(кКал/100гр):</span> 1180</p>
+                                        </div>
+                                        <div class="main-inner-item">
+                                          <div class="main-inner-price">
+                                            <p>107 грн.</p>
+                                          </div>
+                                          <div class="main-inner-cart">
+                                            <button id="cart-btn"><i class="icon-basket"></i></button>
+                                          </div>
+                                       </div>
+                                      </div>
+                                      <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                          <div class="main-inner-img">
+                                            <img src="images/15.png" alt="">
+                                          </div>
+                                          <div class="main-inner-name">
+                                            <h3>Бекон ранч</h3>
+                                          </div>
+                                          <div class="main-inner-composition">
+                                            <p><span>Состав:</span> фирменный пицца-соус, моцарелла, бекон, ветчина, телятина, помидор, перец болгарский, соус ранч</p>
+                                          </div>
+                                          <div class="main-inner-caloricity">
+                                            <p><span>Калорийность(кКал/100гр):</span> 1322</p>
+                                          </div>
+                                          <div class="main-inner-item">
+                                            <div class="main-inner-price">
+                                              <p>113 грн.</p>
+                                            </div>
+                                            <div class="main-inner-cart">
+                                              <button id="cart-btn"><i class="icon-basket"></i></button>
+                                            </div>
+                                         </div>
+                                        </div>
+                                        <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                            <div class="main-inner-img">
+                                              <img src="images/16.png" alt="">
+                                            </div>
+                                            <div class="main-inner-name">
+                                              <h3>Гроссето</h3>
+                                            </div>
+                                            <div class="main-inner-composition">
+                                              <p><span>Состав:</span> фирменный пицца-соус, моцарелла, лосось, креветки, сладкий перец, маслины, лимон, базилик, орегано</p>
+                                            </div>
+                                            <div class="main-inner-caloricity">
+                                              <p><span>Калорийность(кКал/100гр):</span> 980</p>
+                                            </div>
+                                            <div class="main-inner-item">
+                                              <div class="main-inner-price">
+                                                <p>159 грн.</p>
+                                              </div>
+                                              <div class="main-inner-cart">
+                                                <button id="cart-btn"><i class="icon-basket"></i></button>
+                                              </div>
+                                           </div>
+                                          </div>
+                                          <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                              <div class="main-inner-img">
+                                                <img src="images/17.png" alt="">
+                                              </div>
+                                              <div class="main-inner-name">
+                                                <h3>Тоскана</h3>
+                                              </div>
+                                              <div class="main-inner-composition">
+                                                <p><span>Состав:</span> фирменный пицца-соус, моцарелла, ветчина, бекон, салями-пеперони, сладкий перец, сыр «Пармезан», базилик, орегано</p>
+                                              </div>
+                                              <div class="main-inner-caloricity">
+                                                <p><span>Калорийность(кКал/100гр):</span> 1310</p>
+                                              </div>
+                                              <div class="main-inner-item">
+                                                <div class="main-inner-price">
+                                                  <p>139 грн.</p>
+                                                </div>
+                                                <div class="main-inner-cart">
+                                                  <button id="cart-btn"><i class="icon-basket"></i></button>
+                                                </div>
+                                             </div>
+                                            </div>
+                                            <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                                <div class="main-inner-img">
+                                                  <img src="images/18.png" alt="">
+                                                </div>
+                                                <div class="main-inner-name">
+                                                  <h3>Грибная</h3>
+                                                </div>
+                                                <div class="main-inner-composition">
+                                                  <p><span>Состав:</span> фирменный пицца-соус, моцарелла, шампиньоны, опята, маслины, лук, базилик, орегано, зелень</p>
+                                                </div>
+                                                <div class="main-inner-caloricity">
+                                                  <p><span>Калорийность(кКал/100гр):</span> 1451</p>
+                                                </div>
+                                                <div class="main-inner-item">
+                                                  <div class="main-inner-price">
+                                                    <p>132 грн.</p>
+                                                  </div>
+                                                  <div class="main-inner-cart">
+                                                    <button id="cart-btn"><i class="icon-basket"></i></button>
+                                                  </div>
+                                               </div>
+                                              </div>
+                                              <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                                  <div class="main-inner-img">
+                                                    <img src="images/19.png" alt="">
+                                                  </div>
+                                                  <div class="main-inner-name">
+                                                    <h3>Туринская</h3>
+                                                  </div>
+                                                  <div class="main-inner-composition">
+                                                    <p><span>Состав:</span> горчичный соус, моцарелла, салями, охотничьи колбаски, огурцы маринованные, зелень</p>
+                                                  </div>
+                                                  <div class="main-inner-caloricity">
+                                                    <p><span>Калорийность(кКал/100гр):</span> 1140</p>
+                                                  </div>
+                                                  <div class="main-inner-item">
+                                                    <div class="main-inner-price">
+                                                      <p>138 грн.</p>
+                                                    </div>
+                                                    <div class="main-inner-cart">
+                                                      <button id="cart-btn"><i class="icon-basket"></i></button>
+                                                    </div>
+                                                 </div>
+                                                </div>
+                                                <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                                    <div class="main-inner-img">
+                                                      <img src="images/20.jpg" alt="">
+                                                    </div>
+                                                    <div class="main-inner-name">
+                                                      <h3>Венецианская</h3>
+                                                    </div>
+                                                    <div class="main-inner-composition">
+                                                      <p><span>Состав:</span> фирменный пицца-соус, моцарелла, телятина, куриная грудка, бекон, шампиньоны, помидор, перец, пармезан, зелень</p>
+                                                    </div>
+                                                    <div class="main-inner-caloricity">
+                                                      <p><span>Калорийность(кКал/100гр):</span> 1341</p>
+                                                    </div>
+                                                    <div class="main-inner-item">
+                                                      <div class="main-inner-price">
+                                                        <p>142 грн.</p>
+                                                      </div>
+                                                      <div class="main-inner-cart">
+                                                        <button id="cart-btn"><i class="icon-basket"></i></button>
+                                                      </div>
+                                                   </div>
+                                                  </div>
+                                                  <div  id="main-pizza" class="main-inner col-12 col-md-6 col-lg-4">
+                                                      <div class="main-inner-img">
+                                                        <img src="images/21.jpg" alt="">
+                                                      </div>
+                                                      <div class="main-inner-name">
+                                                        <h3>Четыре сезона</h3>
+                                                      </div>
+                                                      <div class="main-inner-composition">
+                                                        <p><span>Состав:</span> фирменный пицца-соус, моцарелла, опята, куриная грудка, помидор, перец, лук, шампиньоны, пармезан, зелень</p>
+                                                      </div>
+                                                      <div class="main-inner-caloricity">
+                                                        <p><span>Калорийность(кКал/100гр):</span> 1479</p>
+                                                      </div>
+                                                      <div class="main-inner-item">
+                                                        <div class="main-inner-price">
+                                                          <p>145 грн.</p>
+                                                        </div>
+                                                        <div class="main-inner-cart">
+                                                          <button id="cart-btn"><i class="icon-basket"></i></button>
+                                                        </div>
+                                                     </div>
+                                                    </div>                                        
+                                                  </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal-cart">
+      <button class="modal-cart-close">x</button>
+      <div class="modal-cart-window">
+          <div class="modal-cart-pizza">
+            <img src="" alt="">
+              <h1>some name</h1>
+              <p>Состав: some composition</p>
+              <span>Цена: грн.</span>
+          </div>
+      </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/listOfPizzasAndCompozitions.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
